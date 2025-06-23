@@ -106,16 +106,16 @@
         $(document).on("change", "#source-type-select", function(e) {
             if ($(this).val() !== "local") {
                 $("#courseVideoFile").html(`
-              <label class="form-label">${embedVideoUrl}</label>  
+              <label class="form-label">${embedVideoUrl}</label>
               <input type="text" id="v-url" class="form-input" placeholder="${embedVideoUrl}" name="demo_url" value="" autocomplete="off" />
              `);
             } else {
                 $("#courseVideoFile").html(
                     `<label class="form-label">${uploadFileText}</label>
                 <div class="border border-input-border rounded-md px-2 py-1.5">
-                    <input type="file" id="v-url" class="w-full" name="short_video"> 
+                    <input type="file" id="v-url" class="w-full" name="short_video">
                     <span class="text-danger error-text short_video_err"></span>
-                </div> 
+                </div>
                 `
                 );
             }

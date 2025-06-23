@@ -1,8 +1,8 @@
 <x-frontend-layout>
-    <x-theme::breadcrumbs.breadcrumb-one 
-        pageTitle="Organization" 
+    <x-theme::breadcrumbs.breadcrumb-one
+        pageTitle="Organization"
         pageRoute="{{ route('organization.list') }}"
-        pageName="Organization" 
+        pageName="Organization"
     />
     <!-- START INNER CONTENT AREA -->
     <div class="container">

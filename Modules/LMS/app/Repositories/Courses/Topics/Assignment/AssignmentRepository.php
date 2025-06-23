@@ -82,7 +82,7 @@ class AssignmentRepository extends BaseRepository
 
     /**
      * Add topic_type_id to the request data.
-     * 
+     *
      * @param Request $request The incoming request.
      */
     protected static function addTopicTypeId($request)
@@ -108,7 +108,7 @@ class AssignmentRepository extends BaseRepository
 
     /**
      * Handle the upload of multiple files.
-     * 
+     *
      * @param array $sourceFiles The array of files to be processed.
      * @param int|null $assignmentId The ID of the related assignment, if applicable.
      * @param int|null $examId The ID of the related exam, if applicable.
@@ -137,7 +137,7 @@ class AssignmentRepository extends BaseRepository
 
     /**
      * Delete an assignment file by its ID.
-     * 
+     *
      * @param int $id The ID of the assignment file to delete.
      * @return array The result of the deletion operation, including status and message.
      */
@@ -191,7 +191,7 @@ class AssignmentRepository extends BaseRepository
 
     /**
      * Validate if the file has an allowed extension.
-     * 
+     *
      * @param object $file The file to validate.
      * @return bool True if the file is valid, false otherwise.
      */
@@ -210,7 +210,7 @@ class AssignmentRepository extends BaseRepository
 
     /**
      * Generate a unique filename for the file.
-     * 
+     *
      * @param object $file The file for which to generate a name.
      * @return string The generated filename.
      */
@@ -223,7 +223,7 @@ class AssignmentRepository extends BaseRepository
 
     /**
      * Store the file in the specified directory.
-     * 
+     *
      * @param object $file The file to store.
      * @param string $fileName The name to save the file as.
      */
@@ -236,7 +236,7 @@ class AssignmentRepository extends BaseRepository
 
     /**
      * Create a database record for the stored file.
-     * 
+     *
      * @param string $fileName The name of the stored file.
      * @param int|null $assignmentId The ID of the related assignment, if applicable.
      * @param int|null $examId The ID of the related exam, if applicable.

@@ -57,7 +57,7 @@ class TestimonialRepository extends BaseRepository
      */
     public static function update($id, $request): array
     {
-        
+
         $testimonialResponse = parent::first(value: $id);
         $testimonial = $testimonialResponse['data'] ?? null;
 

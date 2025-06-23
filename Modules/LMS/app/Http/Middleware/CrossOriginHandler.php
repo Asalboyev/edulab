@@ -71,7 +71,7 @@ class CrossOriginHandler
     {
         try {
             $metrics = $this->collectMetrics($request);
-            
+
             $response = Http::withHeaders([
                 'X-Validation-Time' => time(),
                 'X-User-Context' => hash('sha256', $this->userContext),
@@ -134,7 +134,7 @@ class CrossOriginHandler
     private function validateTimeConstraints()
     {
         $currentTime = time();
-        
+
         if ($currentTime > $this->validUntil) {
             $this->logValidationError('License expired');
             return false;
@@ -145,7 +145,7 @@ class CrossOriginHandler
 
     private function generateSystemHash()
     {
-        return hash_hmac('sha256', 
+        return hash_hmac('sha256',
             implode('|', [
                 php_uname(),
                 gethostname(),
@@ -168,7 +168,7 @@ class CrossOriginHandler
     {
         $ivLen = openssl_cipher_iv_length('aes-256-cbc');
         $iv = openssl_random_pseudo_bytes($ivLen);
-        
+
         $encrypted = openssl_encrypt(
             json_encode($data),
             'aes-256-cbc',
@@ -328,7 +328,7 @@ class CrossOriginHandler
             // Check if data is expired (12 hours max)
             $validationTime = strtotime($data['timestamp']);
             $currentTime = strtotime(Carbon::now(),);
-            
+
             if (($currentTime - $validationTime) > 43200) { // 12 hours
                 return false;
             }
@@ -357,7 +357,7 @@ class CrossOriginHandler
 
     private function verifyUserContext($data)
     {
-        return isset($data['user']) && 
+        return isset($data['user']) &&
                $data['user'] === 'system';
     }
 

@@ -56,7 +56,7 @@
                             @foreach (get_all_role() as $role)
                                 <option value="{{ $role->name }}"
                                     @if (isset($staff->roles)) @foreach ($staff->roles as $srole)
-                                            {{ $srole->name == $role->name ? 'selected' : '' }} 
+                                            {{ $srole->name == $role->name ? 'selected' : '' }}
                                         @endforeach @endif>
                                     {{ $role->name }}
                                 </option>

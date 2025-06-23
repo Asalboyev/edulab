@@ -353,16 +353,16 @@
 
             if ($(this).val() !== "local") {
                 $("#courseTopicVideoFile").html(`
-                  <label for="v-url" class="form-label"> {{ translate('Video Url') }} </label>  
+                  <label for="v-url" class="form-label"> {{ translate('Video Url') }} </label>
                   <input type="text" id="v-url" class="form-input" placeholder="{{ translate('Video Url') }}"  name="video_url"  value="{{ $video_url ?? '' }}"  autocomplete="off" />
                  `)
             } else {
 
                 $("#courseTopicVideoFile").html(
                     `<label for="v-url" class="form-label">{{ translate('Upload File') }}</label><div class="border border-input-border rounded-md px-2 py-1.5">
-                    <input type="file" id="v-url" class="w-full" name="video"> </div> <span class="text-danger error-text video_err"></span> 
-                    
-                    
+                    <input type="file" id="v-url" class="w-full" name="video"> </div> <span class="text-danger error-text video_err"></span>
+
+
                     @if (!empty($topic))
                     <div class="video mt-4">
                         @if (fileExists($folder = 'lms/courses/topics/videos', $fileName = $topic?->topicable?->system_video) == true &&
@@ -374,7 +374,7 @@
                         @endif
                     </div>
                 @endif
-                    
+
                     `
                 );
             }

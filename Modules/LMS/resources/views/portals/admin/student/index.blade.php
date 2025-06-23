@@ -124,11 +124,11 @@
                                 $userInfo = $student?->userable ?? null;
                                 $userableTranslations = [];
                                 $designationTranslations = [];
-                                
+
                                 if ($userInfo) {
                                     $userableTranslations = parse_translation($userInfo);
                                 }
-                                
+
                                 $firstName = $userableTranslations['first_name'] ?? $userInfo?->first_name ?? '';
                                 $lastName = $userableTranslations['last_name'] ?? $userInfo?->last_name ?? '';
 

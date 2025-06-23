@@ -1,7 +1,7 @@
 <x-frontend-layout>
-    <x-theme::breadcrumbs.breadcrumb-one 
-        pageTitle="Courses Bundle"        
-        pageName="Courses Bundle" 
+    <x-theme::breadcrumbs.breadcrumb-one
+        pageTitle="Courses Bundle"
+        pageName="Courses Bundle"
     />
     <div class="container">
         <div class="flex-center-between flex-col sm:flex-row gap-5">

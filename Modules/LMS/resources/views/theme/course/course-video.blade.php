@@ -69,7 +69,7 @@
                             @if (count($assignments) > 0)
                                 <x-theme::course.assignment :assignments="$assignments" />
                             @else
-                                <x-theme::cards.empty 
+                                <x-theme::cards.empty
                                     title="No assignment"
                                     description="This course does not include any mandatory assignments, allowing you to focus on learning at your own pace without the pressure of submissions."
                                 />

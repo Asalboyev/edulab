@@ -17,13 +17,13 @@
             <x-portal::course.price-form action="{{ route('course.store') }}" :course=$course />
 
             <x-portal::course.media-form action="{{ route('course.store') }}" :course=$course />
-            
+
             <x-portal::course.meeting-form action="{{ route('course.store') }}" :course=$course />
 
             <x-portal::course.notice-board-form action="{{ route('course.store') }}" :course=$course />
 
             <x-portal::course.setting-form action="{{ route('course.store') }}" :course=$course />
-            
+
             <x-portal::course.finish action="{{ route('course.index') }}" />
         </div>
     </div>

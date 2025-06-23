@@ -1,4 +1,4 @@
-@php 
+@php
     $courses = $courses ?? [];
     $courseCategories = $courseCategories ?? [];
 @endphp

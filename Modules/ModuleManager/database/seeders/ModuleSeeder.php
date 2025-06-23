@@ -56,9 +56,9 @@ class ModuleSeeder extends Seeder
                 'author' => 'CodexShaper',
                 'email' => 'codexshaper@gmail.com',
                 "keywords" => [
-                    "modules", 
-                    "module manager", 
-                    "envato", 
+                    "modules",
+                    "module manager",
+                    "envato",
                     "marketplace"
                 ],
                 'status' => 'active',
@@ -83,9 +83,9 @@ class ModuleSeeder extends Seeder
                 'author' => 'CodexShaper',
                 'email' => 'codexshaper@gmail.com',
                 "keywords" => [
-                    "roles", 
-                    "permissions", 
-                    "access control", 
+                    "roles",
+                    "permissions",
+                    "access control",
                     "user management"
                 ],
                 'status' => 'active',
@@ -165,10 +165,10 @@ class ModuleSeeder extends Seeder
             ]);
 
             // Dependencies (dependency_name is required)
-            $dependencies = is_string($newModule['dependencies'] ?? null) 
-                ? json_decode($newModule['dependencies'], true) 
+            $dependencies = is_string($newModule['dependencies'] ?? null)
+                ? json_decode($newModule['dependencies'], true)
                 : ($newModule['dependencies'] ?? []);
-            
+
             if (!empty($dependencies)) {
                 foreach ($dependencies as $name => $constraint) {
                     $module->dependencies()->create([

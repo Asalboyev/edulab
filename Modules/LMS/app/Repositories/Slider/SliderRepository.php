@@ -30,7 +30,7 @@ class SliderRepository extends BaseRepository
 
     /**
      *
-     * @param  Request $request 
+     * @param  Request $request
      */
     public static function save($request): array
     {
@@ -44,7 +44,7 @@ class SliderRepository extends BaseRepository
         $response = parent::save($request->all());
         $slider = $response['data'] ?? null;
         if ($response['status'] === 'success' && $slider) {
-            
+
             $data = self::translateData($request->all());
             self::translate($slider, $data, locale: $request->locale ?? app()->getLocale());
         }
@@ -53,7 +53,7 @@ class SliderRepository extends BaseRepository
 
     /**
      * @param  int  $id
-     * @param  Request $request 
+     * @param  Request $request
      */
     public static function update($id, $request): array
     {

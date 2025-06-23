@@ -130,11 +130,11 @@
                                 $userInfo = $organization->userable ?? null;
                                 $userableTranslations = [];
                                 $designationTranslations = [];
-                                
+
                                 if ($userInfo) {
                                     $userableTranslations = parse_translation($userInfo);
                                 }
-                                
+
                                 $name = $userableTranslations['name'] ?? $userInfo?->name ?? '';
                             @endphp
                             <tr>

@@ -101,7 +101,7 @@ class BundleRepository extends BaseRepository
 
     /**
      * handleCourse
-     * @param Request $request 
+     * @param Request $request
      *
      */
     private static function handleCourse($request)

@@ -9,7 +9,7 @@
         <div class="swiper banner-slider">
             <div class="swiper-wrapper">
                 @foreach ($sliders as $slider)
-                    @php       
+                    @php
                         if ( ! $slider->status ) {
                             continue;
                         }
@@ -71,10 +71,10 @@
     @if ($socials)
         <div class="px-3 py-2 border border-white rounded-full hidden min-[1536px]:flex items-center gap-4 w-max text-orientation-mixed writing-mode absolute left-4 top-1/2 !-translate-y-1/2 z-10">
             <div class="text-heading dark:text-white font-bold leading-none"> {{ translate('Follow Us') }} -</div>
-            <x-theme::social.social-list-one 
-                :socials="$socials" 
+            <x-theme::social.social-list-one
+                :socials="$socials"
                 ulClass="flex items-center gap-2"
-                itemClass="size-10 rounded-50 bg-white text-heading dark:text-white flex-center hover:bg-primary hover:text-white custom-transition" 
+                itemClass="size-10 rounded-50 bg-white text-heading dark:text-white flex-center hover:bg-primary hover:text-white custom-transition"
             />
         </div>
     @endif

@@ -21,7 +21,7 @@
                                     ? asset("$bannerPath/{$posterImage}")
                                     : asset($defaultBanner);
                         @endphp
-                        <div 
+                        <div
                             class="flex flex-col {{ $loop->iteration % 2 == 0 ? 'bg-secondary text-heading' : 'bg-primary text-white' }} bg-no-repeat bg-cover bg-right h-[300px] px-10 py-12 pb-[60px] rtl:rotate-xz-180"
                             style='{{ $bannerImage ? "background-image: url( $bannerImage)" : '' }}'
                         >

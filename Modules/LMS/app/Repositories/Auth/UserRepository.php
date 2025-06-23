@@ -280,7 +280,7 @@ class UserRepository  extends BaseRepository
     /**
      * getUserById
      *
-     * 
+     *
      */
     public function getUserById($id)
     {

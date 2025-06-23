@@ -14,12 +14,12 @@
                 <div class="container">
                     <div class="swiper banner-slider">
                         <div class="swiper-wrapper">
-                            @foreach( $sliders as $slider )  
+                            @foreach( $sliders as $slider )
                                 @php
                                     if ( ! $slider->status ) {
                                         continue;
                                     }
-                                    
+
                                     $translations = parse_translation($slider);
                                     $title = $translations['title'] ?? $slider->title ?? '';
                                     $description = $translations['description'] ?? $slider->description ?? '';
@@ -68,7 +68,7 @@
                         @foreach( $students as $student )
                             @php
                                 $user= $student->userable ?? null;
-                                $profileImg=  $user && fileExists('lms/students', $user->profile_img) == true ? 
+                                $profileImg=  $user && fileExists('lms/students', $user->profile_img) == true ?
                                     asset("storage/lms/students/{$user->profile_img}"):
                                     asset('lms/frontend/assets/images/370x396.svg')
                             @endphp
